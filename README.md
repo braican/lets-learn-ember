@@ -16,6 +16,12 @@ My notes
   * shared behaviors amongst classes
 * define actions on controllers or routes
 
+### Ember vs. Angular
+* Angular - good at getting aps started, at cost of long-term maintainability
+* Angular - better with animations
+* Angular - better to demo (like To Do app), but less scalability
+* Ember -  forces conventions that forces maintainability
+
 ### Code samples
 `.get()`
 `.set()`
@@ -26,12 +32,12 @@ My notes
 `App = Ember.Application.create();`
 * attaches instance of application to body tag
 
-`Router.map(function(){
-	this.resource('posts', function(){
-		this.route('new');
-		this.route('show');
-	})
-})`
+    Router.map(function(){
+	    this.resource('posts', function(){
+		    this.route('new');
+		    this.route('show');
+	    })
+    })
 
 `rollback()` rolls back model to last clean state
 
