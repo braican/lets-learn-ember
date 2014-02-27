@@ -20,6 +20,7 @@ My notes
 * Angular - good at getting aps started, at cost of long-term maintainability
 * Angular - better with animations
 * Angular - better to demo (like To Do app), but less scalability
+* Angulat - way better at testing
 * Ember -  forces conventions that forces maintainability
 
 ### Code samples
