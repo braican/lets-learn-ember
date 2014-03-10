@@ -1,0 +1,44 @@
+{
+    "breweries": [{
+        "id": "1",
+        "name": "Harpoon Brewery",
+        "address": {
+            "street": "306 Northern Avenue",
+            "city": "Boston",
+            "state": "MA"
+        },
+        "website": "http://www.harpoonbrewery.com/",
+        "latlng": {
+            "lat": "42.346592",
+            "lng": "-71.034508"
+        }
+    },
+    {
+        "id": "2",
+        "name": "Samuel Adams",
+        "address": {
+            "street": "30 Germania Street",
+            "city": "Boston",
+            "state": "MA"
+        },
+        "website": "http://www.samueladams.com/",
+        "latlng": {
+            "lat": "42.314369",
+            "lng": "-71.103424"
+        }
+    },
+    {
+        "id": "3",
+        "name": "Allagash Brewing Company",
+        "address": {
+            "street": "50 Industrial Way",
+            "city": "Portland",
+            "state": "ME"
+        },
+        "website": "http://www.allagash.com/",
+        "latlng": {
+            "lat": "42.314369",
+            "lng": "-71.103424"
+        }
+    }]
+}

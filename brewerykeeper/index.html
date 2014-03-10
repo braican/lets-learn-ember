@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ember Starter Kit</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <script type="text/x-handlebars">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <a href="#" class="brand">Brewerykeeper</a>
+                <ul class="nav">
+                    <li>{{#link-to 'breweries'}}Breweries{{/link-to}}</li>
+                    <li>{{#link-to 'about'}}About{{/link-to}}</li>
+                </ul>
+            </div>
+        </div>
+
+        {{outlet}}
+    </script>
+
+    <script type="text/x-handlebars" id="about">
+        <h1>Brewerykeeper</h1>
+        <div class="stuff">
+            <p>This is some stuff</p>
+        </div>
+    </script>
+
+    <script type="text/x-handlebars" id="breweries">
+        <h2>The Breweries</h2>
+        <div class="brewery-list">
+            {{#each}}
+                <div class="row clearfix">
+                    {{#link-to 'brewery' this}}<div class="name">{{beer.beer_name}}</div>{{/link-to}}
+                </div>
+            {{/each}}
+        </div>
+
+        <div class="brewery-outlet">
+            {{outlet}}
+        </div>
+    </script>
+
+    <script type="text/x-handlebars" id="brewery">
+        {{#if isEditing}}
+            {{partial 'brewery/edit'}}
+            <button {{action 'doneEditing'}}>Done</button>
+        {{else}}
+            <button {{action 'edit'}}>Edit</button>
+        {{/if}}
+
+        <div class="row clearfix">
+            <div class="name">{{beer.beer_name}}</div>
+            <div class="name">{{recent_checkin_id}}</div>
+            <div class="beer-type">{{beer.beer_style}}</div>
+            <div class="brewery">{{brewery.brewery_name}}</div>
+            <div class="city">{{brewery.location.brewery_city}}</div>
+            <div class="state">{{brewery.location.brewery_state}}</div>
+            <div class="brewers-website">{{brewery.contact.url}}</div>
+        </div>
+    </script>
+
+    <script type="text/x-handlebars" id="brewery/_edit">
+        <p>{{input type="text" value=beer.beer_name}}</p>
+    </script>
+
+    <script src="js/libs/jquery-1.10.2.js"></script>
+    <script src="js/libs/handlebars-1.1.2.js"></script>
+    <script src="js/libs/ember-1.4.0.js"></script>
+    <script src="js/app.js"></script>
+    <!-- to activate the test runner, add the "?test" query string parameter -->
+    <script src="tests/runner.js"></script>
+</body>
+</html>
